@@ -131,24 +131,24 @@ public class mainMenu extends inGame{
             quit.setVisible(true);
         });
 
-        instruct.addActionListener(e -> {
-            play.setVisible(false);
-            instruct.setVisible(false);
-            title.setVisible(false);
-            diff.setVisible(false);
+        instruct.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                play.setVisible(false);
+                instruct.setVisible(false);
+                title.setVisible(false);
+                diff.setVisible(false);
 
-            easy.setVisible(false);
-            medium.setVisible(false);
-            hard.setVisible(false);
-            back.setVisible(true);
-            text.setVisible(true);
-            how.setVisible(true);
-            quit.setVisible(false);
+                easy.setVisible(false);
+                medium.setVisible(false);
+                hard.setVisible(false);
+                back.setVisible(true);
+                text.setVisible(true);
+                how.setVisible(true);
+                quit.setVisible(false);
+            }
         });
-
         quit.addActionListener(e -> System.exit(0));
 
-        //This is where you pick your difficulty from the main menu (Play > difficulty)
         easy.addActionListener(e -> {
             frame.dispose();
             Main app = new Main();
@@ -159,7 +159,7 @@ public class mainMenu extends inGame{
             frame.dispose();
             Main app = new Main();
             app.initialize();
-            app.difficultyPicked("Medium");
+            app.difficultyPicked("Intermediate");
         });
         hard.addActionListener(e -> {
             frame.dispose();
@@ -170,6 +170,4 @@ public class mainMenu extends inGame{
 
         frame.setVisible(true);
     }
-
-
 }
