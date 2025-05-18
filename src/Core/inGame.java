@@ -77,7 +77,6 @@ public void createGUI(int a, int b) {
             panelMid.add(tile);
         }
     }
-
     panelMid.revalidate();
     panelMid.repaint();
     if (frame != null) {
